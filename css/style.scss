@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+
+/*--- Variables ---*/
+
+$credit-card-width: 428px;
+$credit-card-height: 270px;
+$white-50: #ffffff;
+$card-border-radius: 20px;
+$primary-30: rgba(134,
+174,
+204,
+1);
+$primary-50: rgba(83,
+113,
+136,
+1);
+
+/*--- Mixins ---*/
+
+@mixin opacity-transition($second,
+$ease-type) {
+    -webkit-transition: opacity $second $ease-type;
+    -moz-transition: opacity $second $ease-type;
+    -o-transition: opacity $second $ease-type;
+    transition: opacity $second $ease-type;
+}
+
+@mixin size($width,
+$height) {
+    width: $width;
+    height: $height;
+}
+
+
+/*--- Base Setting ---*/
+
+html,
+body {
+    background-color: #2d3136;
+    min-height: 1000px;
+}
+
+* {
+    // border: 1px solid black;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+
+/*--- Credit Card ---*/
+
+.credit-card-container {
+    width: $credit-card-width;
+    height: $credit-card-height;
+    position: relative;
+    perspective: 800px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+@mixin card-transition($moveTime,
+$transformTime) {
+    -webkit-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    -moz-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    -ms-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    -o-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    transition: margin-left $moveTime ease-in-out, transform $transformTime;
+}
+
+.credit-card {
+    @include size(100%,
+    100%);
+    background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
+    border-radius: $card-border-radius;
+    position: absolute;
+    color: $white-50;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    @include card-transition (1s,
+    1s);
+    &.data-send {
+        margin-left: 1000px;
+    }
+    & * {
+        font-family: 'Aldrich', sans-serif;
+    }
+    figure {
+        margin: 0;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
+    }
+    .front {
+        background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
+        background-repeat: no-repeat;
+        background-color: $primary-50;
+        padding: 10px 25px;
+        border-radius: $card-border-radius;
+    }
+    &.flipped {
+        transform: rotateY( 180deg);
+    }
+    .bank-name {
+        color: $white-50;
+        margin-top: 10;
+    }
+    .emv-chip {
+        width: 65px;
+        height: 45px;
+        background-color: Khaki;
+        margin: 10px 0 10px 10px;
+        border-radius: 10px;
+    }
+    .credit-card-numbers {
+        height: 30px;
+        font-size: 26px;
+        line-height: 30px;
+        color: white;
+        margin-top: 15px;
+        text-align: left;
+        .numbers-group {
+            display: inline-block;
+            margin-left: 0;
+            margin-right: 10px;
+            top: 0;
+            line-height: 30px;
+            width: 77px;
+            font-size: 26px;
+            height: 30px;
+            text-align: left;
+            &:after {
+                position: absolute;
+                width: 8px;
+                height: 4px;
+                background-color: #fff;
+                content: "";
+                right: -12px;
+                top: 10px;
+            }
+            &:nth-child(4) {
+                margin-right: 0px;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .expired {
+        color: white;
+        margin-top: 10px;
+        margin-left: 150px;
+        width: 100px;
+        p {
+            margin: 0;
+        }
+    }
+    .client-fullname {
+        display: block;
+        font-size: 20px;
+        margin-left: 0px;
+        text-transform: uppercase;
+    }
+    .credit-card-logo {
+        width: 100px;
+        height: 70px;
+        position: absolute;
+        right: 25px;
+        bottom: 25px;
+    }
+    .credit-card-logo:after {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: "";
+        opacity: 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        @include opacity-transition(0.3s,
+        ease-in-out);
+    }
+    .credit-card-logo.visa:after {
+        background-image: url(../img/visa.jpg);
+        opacity: 1;
+        @include opacity-transition(0.3s,
+        ease-in-out);
+    }
+    .credit-card-logo.master:after {
+        background-image: url(../img/master.jpg);
+        opacity: 1;
+        @include opacity-transition(0.3s,
+        ease-in-out);
+    }
+    .credit-card-logo.american-express:after {
+        background-image: url(../img/americanExpress.jpg);
+        opacity: 1;
+        @include opacity-transition(0.3s,
+        ease-in-out);
+    }
+    .credit-card-logo.jcb:after {
+        background-image: url(../img/jcb.jpg);
+        opacity: 1;
+        @include opacity-transition(0.3s,
+        ease-in-out);
+    }
+    .back {
+        background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
+        background-repeat: no-repeat;
+        background-color: $primary-50;
+        padding: 10px 30px;
+        border-radius: $card-border-radius;
+        transform: rotateY( 180deg);
+        .magnetic-stripe {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            left: 0;
+            top: 40px;
+            background-color: #1d1d1d;
+        }
+        .sign-up-box {
+            margin-top: 100px;
+            width: 180px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: inline-block;
+            float: left;
+        }
+        .cvc-box {
+            margin-top: 100px;
+            width: 100px;
+            height: 50px;
+            color: rgba(83, 113, 136, 1);
+            background-color: #fff;
+            display: inline-block;
+            float: left;
+            padding-left: 10px;
+            padding-top: 3px;
+            h3,
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.data-table {
+    width: $credit-card-width;
+    height: $credit-card-height;
+    background-color: $white-50;
+    border-radius: $card-border-radius;
+    color: $primary-50;
+    padding: 20px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
+
+section.user-input {
+    margin-top: 15px;
+    label {
+        color: white;
+        margin: 4px 0;
+    }
+    button#sendCreditCardData {
+        margin-top: 20px;
+    }
+}

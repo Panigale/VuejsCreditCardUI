@@ -3,6 +3,14 @@
 
 /*--- Variables ---*/
 
+$white-gradient-start: rgba(255,
+255,
+255,
+0);
+$white-gradient-end:rgba(255,
+255,
+255,
+0.2);
 $credit-card-width: 428px;
 $credit-card-height: 270px;
 $white-50: #ffffff;
@@ -11,10 +19,11 @@ $primary-30: rgba(134,
 174,
 204,
 1);
-$primary-50: rgba(83,
-113,
-136,
+$primary-50: rgba(54,
+77,
+95,
 1);
+$page-background: #2d3136;
 
 /*--- Mixins ---*/
 
@@ -32,13 +41,22 @@ $height) {
     height: $height;
 }
 
+@mixin background-gradient($start-color,
+$end-color) {
+    background: $start-color;
+    background: linear-gradient(90deg, $start-color 0%, $end-color 100%);
+    background: -moz-linear-gradient(90deg, $start-color 0%, $end-color 100%);
+    background: -webkit-linear-gradient(90deg, $start-color 0%, $end-color 100%);
+}
+
 
 /*--- Base Setting ---*/
 
 html,
 body {
-    background-color: #2d3136;
+    background-color: $page-background;
     min-height: 1000px;
+    overflow-x: hidden;
 }
 
 * {
@@ -48,8 +66,31 @@ body {
     box-sizing: border-box;
 }
 
+h1.title {
+    font-size: 36px;
+    color: $white-50;
+    text-align: center;
+    margin: 0;
+    margin-top: 40px;
+}
+
 h2 {
     font-size: 28px;
+}
+
+h3.sub-title {
+    font-size: 20px;
+    color: $white-50;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 10px;
+}
+
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none;
 }
 
 
@@ -61,7 +102,7 @@ h2 {
     position: relative;
     perspective: 800px;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 @mixin card-transition($moveTime,
@@ -89,6 +130,7 @@ $transformTime) {
     }
     & * {
         font-family: 'Aldrich', sans-serif;
+        text-shadow: 0 1px 10px -5px rgba(0, 0, 0, 0.5);
     }
     figure {
         margin: 0;
@@ -99,6 +141,22 @@ $transformTime) {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
+        &:after {
+            position: absolute;
+            content: "";
+            @include size(100%,
+            100%);
+            top: 0;
+            left: 0;
+            border-radius: $card-border-radius;
+            background: radial-gradient(ellipse at top, $white-gradient-end 0%, $white-gradient-start 100%);
+            opacity: 0;
+            @include opacity-transition (0.3s,
+            ease-in-out)
+        }
+        &:hover:after {
+            opacity: 1;
+        }
     }
     .front {
         background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
@@ -185,31 +243,31 @@ $transformTime) {
         opacity: 0;
         background-size: 100% auto;
         background-repeat: no-repeat;
-        @include opacity-transition(0.3s,
+        @include opacity-transition(0.5s,
         ease-in-out);
     }
     .credit-card-logo.visa:after {
         background-image: url(../img/visa.jpg);
         opacity: 1;
-        @include opacity-transition(0.3s,
+        @include opacity-transition(0.5s,
         ease-in-out);
     }
     .credit-card-logo.master:after {
         background-image: url(../img/master.jpg);
         opacity: 1;
-        @include opacity-transition(0.3s,
+        @include opacity-transition(0.5s,
         ease-in-out);
     }
     .credit-card-logo.american-express:after {
         background-image: url(../img/americanExpress.jpg);
         opacity: 1;
-        @include opacity-transition(0.3s,
+        @include opacity-transition(0.5s,
         ease-in-out);
     }
     .credit-card-logo.jcb:after {
         background-image: url(../img/jcb.jpg);
         opacity: 1;
-        @include opacity-transition(0.3s,
+        @include opacity-transition(0.5s,
         ease-in-out);
     }
     .back {
@@ -273,8 +331,25 @@ section.user-input {
     label {
         color: white;
         margin: 4px 0;
+        font-weight: 300;
     }
     button#sendCreditCardData {
+        margin-top: 20px;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    background-color: darken($page-background, 10%);
+    p.copyright {
+        font-size: 14px;
+        color: $white-50;
+        text-align: center;
+        font-weight: 300;
+        margin: 0;
         margin-top: 20px;
     }
 }

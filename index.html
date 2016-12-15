@@ -28,7 +28,7 @@
     <title>Credit Card UI with VUE.js</title>
 </head>
 
-<body v-cloak>
+<body>
     <h1 class="title">VueCard</h1>
     <h3 class="sub-title">Credit Card UI module with VUE.js</h3>
     <article id="app">
@@ -37,24 +37,24 @@
                 <figure class="front">
                     <h2 class="bank-name">Vue Card</h2>
                     <div class="emv-chip"></div>
-                    <div class="credit-card-numbers">
+                    <div v-cloak class="credit-card-numbers">
                         <span class="numbers-group">{{numberGroup1}}</span>
                         <span class="numbers-group">{{numberGroup2}}</span>
                         <span class="numbers-group">{{numberGroup3}}</span>
                         <span class="numbers-group">{{numberGroup4}}</span>
                     </div>
-                    <div class="expired">
+                    <div v-cloak class="expired">
                         <p>Valid Dates</p>
                         <p>{{showMonth}}/{{showYear}}</p>
                     </div>
-                    <h4 class="client-fullname">{{fullName}}</h3>
+                    <h4 v-cloak class="client-fullname">{{fullName}}</h3>
                         <div class="credit-card-logo" :class="creditCardType"></div>
                 </figure>
                 <!-- Back side -->
                 <figure class="back">
                     <div class="magnetic-stripe"></div>
                     <div class="sign-up-box"></div>
-                    <div class="cvc-box">
+                    <div v-cloak class="cvc-box">
                         <p>CVV</p>
                         <h3>{{cvcNumber}}</h3>
                     </div>

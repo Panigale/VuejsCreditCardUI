@@ -9,14 +9,18 @@ body {
   min-height: 1000px;
   overflow-x: hidden; }
 
+[v-cloak] {
+  display: none; }
+
 * {
   position: relative;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box; }
 
 h1.title {
-  font-size: 36px;
+  font-size: 42px;
   color: #ffffff;
+  font-weight: 500;
   text-align: center;
   margin: 0;
   margin-top: 40px; }

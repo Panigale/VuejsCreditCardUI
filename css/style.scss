@@ -59,6 +59,10 @@ body {
     overflow-x: hidden;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 * {
     // border: 1px solid black;
     position: relative;

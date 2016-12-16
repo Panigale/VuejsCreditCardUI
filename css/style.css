@@ -279,13 +279,13 @@ a:visited {
     -o-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out; }
   .credit-card .credit-card-logo.visa:after {
-    background-image: url(../img/visa.jpg); }
+    background-image: url(../img/visa.png); }
   .credit-card .credit-card-logo.master:after {
-    background-image: url(../img/master.jpg); }
+    background-image: url(../img/master.png); }
   .credit-card .credit-card-logo.american-express:after {
-    background-image: url(../img/americanExpress.jpg); }
+    background-image: url(../img/americanExpress.png); }
   .credit-card .credit-card-logo.jcb:after {
-    background-image: url(../img/jcb.jpg); }
+    background-image: url(../img/jcb.png); }
   .credit-card .back {
     padding: 10px 30px;
     -webkit-border-radius: 20px;

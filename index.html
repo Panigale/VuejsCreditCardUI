@@ -67,7 +67,7 @@
                     <div class="sign-up-box"></div>
                     <div v-cloak class="cvc-box">
                         <p>CVV</p>
-                        <h3>{{cvcNumber}}</h3>
+                        <h3>{{cvvNumber}}</h3>
                     </div>
                 </figure>
             </section>
@@ -76,6 +76,7 @@
             <div class="text-box">
                 <p>data = <br> {
                     <br>creditCardNumber: "{{inputNumbers}}",
+                    <br>cvv: "{{cvvNumber}}",
                     <br>validMonth: "{{month}}",
                     <br>validYear: "{{year}}",
                     <br>firstName: "{{firstName}}",
@@ -110,8 +111,8 @@
                                 <input class="flipFront form-control" type="text" v-model="lastName" placeholder="Last name" maxlength="10" />
                             </div>
                         </div>
-                        <label for="">CVC</label>
-                        <input class="credit-number-input only-numbers form-control flipBack" type="text" maxlength="3" v-model="cvcNumber" placeholder="Credit Card Numbers" />
+                        <label for="">CVV</label>
+                        <input class="credit-number-input only-numbers form-control flipBack" type="text" maxlength="3" v-model="cvvNumber" placeholder="Credit Card Numbers" />
                         <div class="row">
                             <div class="col-md-12">
                                 <button @click="calculateSentTime" id="sendCreditCardData" class="btn btn-primary btn-block">Submit</button>

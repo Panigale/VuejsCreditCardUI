@@ -31,6 +31,8 @@ $primary-50: rgba(54,
 77,
 95,
 1);
+$oliver-30: #BCD2AA;
+$oliver-50: #779068;
 $champagne-30: #F4E3C3;
 $champagne-50: #af956d;
 $silver-30: #E1E1E1;
@@ -202,6 +204,10 @@ $main) {
     .btn-primary-card {
         @include setting-cards($primary-30,
         $primary-50);
+    }
+    .btn-oliver-card {
+        @include setting-cards($oliver-30,
+        $oliver-50);
     }
     .btn-champagene {
         @include setting-cards($champagne-30,
@@ -441,6 +447,11 @@ $main-color) {
 .credit-card.primary {
     @include card-color-set($primary-30,
     $primary-50);
+}
+
+.credit-card.oliver {
+    @include card-color-set($oliver-30,
+    $oliver-50)
 }
 
 .credit-card.champagne {

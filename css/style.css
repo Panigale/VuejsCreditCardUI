@@ -70,6 +70,22 @@ a:visited {
       background: -o-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
       background: -ms-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
       background: radial-gradient(ellipse at top, #74a2c4 0%, #2d404f 100%); }
+  .choose-cards .btn-oliver-card {
+    background: #BCD2AA;
+    background: -moz-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #BCD2AA), color-stop(100%, #779068));
+    background: -webkit-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+    background: -o-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+    background: radial-gradient(ellipse at top, #BCD2AA 0%, #779068 100%); }
+    .choose-cards .btn-oliver-card:hover {
+      background: #afc999;
+      background: -moz-radial-gradient(top, ellipse cover, #afc999 0%, #6b815d 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #afc999), color-stop(100%, #6b815d));
+      background: -webkit-radial-gradient(top, ellipse cover, #afc999 0%, #6b815d 100%);
+      background: -o-radial-gradient(top, ellipse cover, #afc999 0%, #6b815d 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #afc999 0%, #6b815d 100%);
+      background: radial-gradient(ellipse at top, #afc999 0%, #6b815d 100%); }
   .choose-cards .btn-champagene {
     background: #F4E3C3;
     background: -moz-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
@@ -334,6 +350,17 @@ a:visited {
   background: radial-gradient(ellipse at top, #86aecc 0%, #364d5f 100%); }
 .credit-card.primary .back .cvc-box {
   color: #364d5f; }
+
+.credit-card.oliver .card-content {
+  background: #BCD2AA;
+  background: -moz-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #BCD2AA), color-stop(100%, #779068));
+  background: -webkit-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+  background: -o-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
+  background: radial-gradient(ellipse at top, #BCD2AA 0%, #779068 100%); }
+.credit-card.oliver .back .cvc-box {
+  color: #779068; }
 
 .credit-card.champagne .card-content {
   background: #F4E3C3;

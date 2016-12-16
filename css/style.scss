@@ -31,10 +31,13 @@ $primary-50: rgba(54,
 77,
 95,
 1);
+$primary-flat: #46759a;
 $oliver-30: #BCD2AA;
 $oliver-50: #779068;
+$oliver-flat: #7dad60;
 $champagne-30: #F4E3C3;
 $champagne-50: #af956d;
+$champagne-flat: #be9d6b;
 $silver-30: #E1E1E1;
 $silver-50: #959595;
 $black-30: #565656;
@@ -188,7 +191,8 @@ $main) {
     }
 }
 
-.choose-cards {
+.choose-cards,
+.drawing-styles {
     margin: 10px auto;
     button {
         color: $white-50;
@@ -201,25 +205,45 @@ $main) {
             outline: none;
         }
     }
-    .btn-primary-card {
+    .primary {
         @include setting-cards($primary-30,
         $primary-50);
+        &.flat {
+            @include setting-cards($primary-flat,
+            $primary-flat);
+        }
     }
-    .btn-oliver-card {
+    .oliver {
         @include setting-cards($oliver-30,
         $oliver-50);
+        &.flat {
+            @include setting-cards($oliver-flat,
+            $oliver-flat);
+        }
     }
-    .btn-champagene {
+    .champagene {
         @include setting-cards($champagne-30,
         $champagne-50);
+        &.flat {
+            @include setting-cards($champagne-flat,
+            $champagne-flat);
+        }
     }
-    .btn-silver {
+    .silver {
         @include setting-cards($silver-30,
         $silver-50);
+        &.flat {
+            @include setting-cards($silver-50,
+            $silver-50);
+        }
     }
-    .btn-black {
+    .black {
         @include setting-cards($black-30,
         $black-50);
+        &.flat {
+            @include setting-cards($black-50,
+            $black-50);
+        }
     }
 }
 
@@ -467,6 +491,50 @@ $main-color) {
 .credit-card.black {
     @include card-color-set($black-30,
     $black-50)
+}
+
+
+/*--- FlatCard ---*/
+
+.credit-card.flat {
+    @include box-shadow(0,
+    5px,
+    0px,
+    0px,
+    rgba(0,
+    0,
+    0,
+    0.1));
+    .card-content {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.credit-card.flat.primary {
+    @include card-color-set($primary-flat,
+    $primary-flat);
+}
+
+.credit-card.flat.oliver {
+    @include card-color-set($oliver-flat,
+    $oliver-flat);
+}
+
+.credit-card.flat.champagne {
+    @include card-color-set($champagne-flat,
+    $champagne-flat);
+}
+
+.credit-card.flat.silver {
+    @include card-color-set($silver-50,
+    $silver-50);
+}
+
+.credit-card.flat.black {
+    @include card-color-set($black-50,
+    $black-50);
 }
 
 

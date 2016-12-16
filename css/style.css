@@ -43,18 +43,24 @@ a:visited {
   text-decoration: none; }
 
 /*--- Introduction ---*/
-.choose-cards {
+.choose-cards,
+.drawing-styles {
   margin: 10px auto; }
-  .choose-cards button {
+  .choose-cards button,
+  .drawing-styles button {
     color: #ffffff;
     margin: 0px 5px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px; }
-    .choose-cards button:hover, .choose-cards button:focus, .choose-cards button:active:focus {
+    .choose-cards button:hover, .choose-cards button:focus, .choose-cards button:active:focus,
+    .drawing-styles button:hover,
+    .drawing-styles button:focus,
+    .drawing-styles button:active:focus {
       color: #ffffff;
       outline: none; }
-  .choose-cards .btn-primary-card {
+  .choose-cards .primary,
+  .drawing-styles .primary {
     background: #86aecc;
     background: -moz-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
     background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #86aecc), color-stop(100%, #364d5f));
@@ -62,7 +68,8 @@ a:visited {
     background: -o-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
     background: -ms-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
     background: radial-gradient(ellipse at top, #86aecc 0%, #364d5f 100%); }
-    .choose-cards .btn-primary-card:hover {
+    .choose-cards .primary:hover,
+    .drawing-styles .primary:hover {
       background: #74a2c4;
       background: -moz-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
       background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #74a2c4), color-stop(100%, #2d404f));
@@ -70,7 +77,26 @@ a:visited {
       background: -o-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
       background: -ms-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
       background: radial-gradient(ellipse at top, #74a2c4 0%, #2d404f 100%); }
-  .choose-cards .btn-oliver-card {
+    .choose-cards .primary.flat,
+    .drawing-styles .primary.flat {
+      background: #46759a;
+      background: -moz-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #46759a), color-stop(100%, #46759a));
+      background: -webkit-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+      background: -o-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+      background: radial-gradient(ellipse at top, #46759a 0%, #46759a 100%); }
+      .choose-cards .primary.flat:hover,
+      .drawing-styles .primary.flat:hover {
+        background: #3e6888;
+        background: -moz-radial-gradient(top, ellipse cover, #3e6888 0%, #3e6888 100%);
+        background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #3e6888), color-stop(100%, #3e6888));
+        background: -webkit-radial-gradient(top, ellipse cover, #3e6888 0%, #3e6888 100%);
+        background: -o-radial-gradient(top, ellipse cover, #3e6888 0%, #3e6888 100%);
+        background: -ms-radial-gradient(top, ellipse cover, #3e6888 0%, #3e6888 100%);
+        background: radial-gradient(ellipse at top, #3e6888 0%, #3e6888 100%); }
+  .choose-cards .oliver,
+  .drawing-styles .oliver {
     background: #BCD2AA;
     background: -moz-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
     background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #BCD2AA), color-stop(100%, #779068));
@@ -78,7 +104,8 @@ a:visited {
     background: -o-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
     background: -ms-radial-gradient(top, ellipse cover, #BCD2AA 0%, #779068 100%);
     background: radial-gradient(ellipse at top, #BCD2AA 0%, #779068 100%); }
-    .choose-cards .btn-oliver-card:hover {
+    .choose-cards .oliver:hover,
+    .drawing-styles .oliver:hover {
       background: #afc999;
       background: -moz-radial-gradient(top, ellipse cover, #afc999 0%, #6b815d 100%);
       background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #afc999), color-stop(100%, #6b815d));
@@ -86,7 +113,26 @@ a:visited {
       background: -o-radial-gradient(top, ellipse cover, #afc999 0%, #6b815d 100%);
       background: -ms-radial-gradient(top, ellipse cover, #afc999 0%, #6b815d 100%);
       background: radial-gradient(ellipse at top, #afc999 0%, #6b815d 100%); }
-  .choose-cards .btn-champagene {
+    .choose-cards .oliver.flat,
+    .drawing-styles .oliver.flat {
+      background: #7dad60;
+      background: -moz-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #7dad60), color-stop(100%, #7dad60));
+      background: -webkit-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+      background: -o-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+      background: radial-gradient(ellipse at top, #7dad60 0%, #7dad60 100%); }
+      .choose-cards .oliver.flat:hover,
+      .drawing-styles .oliver.flat:hover {
+        background: #70a153;
+        background: -moz-radial-gradient(top, ellipse cover, #70a153 0%, #70a153 100%);
+        background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #70a153), color-stop(100%, #70a153));
+        background: -webkit-radial-gradient(top, ellipse cover, #70a153 0%, #70a153 100%);
+        background: -o-radial-gradient(top, ellipse cover, #70a153 0%, #70a153 100%);
+        background: -ms-radial-gradient(top, ellipse cover, #70a153 0%, #70a153 100%);
+        background: radial-gradient(ellipse at top, #70a153 0%, #70a153 100%); }
+  .choose-cards .champagene,
+  .drawing-styles .champagene {
     background: #F4E3C3;
     background: -moz-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
     background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #F4E3C3), color-stop(100%, #af956d));
@@ -94,7 +140,8 @@ a:visited {
     background: -o-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
     background: -ms-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
     background: radial-gradient(ellipse at top, #F4E3C3 0%, #af956d 100%); }
-    .choose-cards .btn-champagene:hover {
+    .choose-cards .champagene:hover,
+    .drawing-styles .champagene:hover {
       background: #f0d9ad;
       background: -moz-radial-gradient(top, ellipse cover, #f0d9ad 0%, #a6895d 100%);
       background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #f0d9ad), color-stop(100%, #a6895d));
@@ -102,7 +149,26 @@ a:visited {
       background: -o-radial-gradient(top, ellipse cover, #f0d9ad 0%, #a6895d 100%);
       background: -ms-radial-gradient(top, ellipse cover, #f0d9ad 0%, #a6895d 100%);
       background: radial-gradient(ellipse at top, #f0d9ad 0%, #a6895d 100%); }
-  .choose-cards .btn-silver {
+    .choose-cards .champagene.flat,
+    .drawing-styles .champagene.flat {
+      background: #be9d6b;
+      background: -moz-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #be9d6b), color-stop(100%, #be9d6b));
+      background: -webkit-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+      background: -o-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+      background: radial-gradient(ellipse at top, #be9d6b 0%, #be9d6b 100%); }
+      .choose-cards .champagene.flat:hover,
+      .drawing-styles .champagene.flat:hover {
+        background: #b69159;
+        background: -moz-radial-gradient(top, ellipse cover, #b69159 0%, #b69159 100%);
+        background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #b69159), color-stop(100%, #b69159));
+        background: -webkit-radial-gradient(top, ellipse cover, #b69159 0%, #b69159 100%);
+        background: -o-radial-gradient(top, ellipse cover, #b69159 0%, #b69159 100%);
+        background: -ms-radial-gradient(top, ellipse cover, #b69159 0%, #b69159 100%);
+        background: radial-gradient(ellipse at top, #b69159 0%, #b69159 100%); }
+  .choose-cards .silver,
+  .drawing-styles .silver {
     background: #E1E1E1;
     background: -moz-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
     background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #E1E1E1), color-stop(100%, #959595));
@@ -110,7 +176,8 @@ a:visited {
     background: -o-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
     background: -ms-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
     background: radial-gradient(ellipse at top, #E1E1E1 0%, #959595 100%); }
-    .choose-cards .btn-silver:hover {
+    .choose-cards .silver:hover,
+    .drawing-styles .silver:hover {
       background: #d4d4d4;
       background: -moz-radial-gradient(top, ellipse cover, #d4d4d4 0%, #888888 100%);
       background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #d4d4d4), color-stop(100%, #888888));
@@ -118,7 +185,26 @@ a:visited {
       background: -o-radial-gradient(top, ellipse cover, #d4d4d4 0%, #888888 100%);
       background: -ms-radial-gradient(top, ellipse cover, #d4d4d4 0%, #888888 100%);
       background: radial-gradient(ellipse at top, #d4d4d4 0%, #888888 100%); }
-  .choose-cards .btn-black {
+    .choose-cards .silver.flat,
+    .drawing-styles .silver.flat {
+      background: #959595;
+      background: -moz-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #959595), color-stop(100%, #959595));
+      background: -webkit-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+      background: -o-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+      background: radial-gradient(ellipse at top, #959595 0%, #959595 100%); }
+      .choose-cards .silver.flat:hover,
+      .drawing-styles .silver.flat:hover {
+        background: #888888;
+        background: -moz-radial-gradient(top, ellipse cover, #888888 0%, #888888 100%);
+        background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #888888), color-stop(100%, #888888));
+        background: -webkit-radial-gradient(top, ellipse cover, #888888 0%, #888888 100%);
+        background: -o-radial-gradient(top, ellipse cover, #888888 0%, #888888 100%);
+        background: -ms-radial-gradient(top, ellipse cover, #888888 0%, #888888 100%);
+        background: radial-gradient(ellipse at top, #888888 0%, #888888 100%); }
+  .choose-cards .black,
+  .drawing-styles .black {
     background: #565656;
     background: -moz-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
     background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #565656), color-stop(100%, #232323));
@@ -126,7 +212,8 @@ a:visited {
     background: -o-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
     background: -ms-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
     background: radial-gradient(ellipse at top, #565656 0%, #232323 100%); }
-    .choose-cards .btn-black:hover {
+    .choose-cards .black:hover,
+    .drawing-styles .black:hover {
       background: #494949;
       background: -moz-radial-gradient(top, ellipse cover, #494949 0%, #161616 100%);
       background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #494949), color-stop(100%, #161616));
@@ -134,6 +221,24 @@ a:visited {
       background: -o-radial-gradient(top, ellipse cover, #494949 0%, #161616 100%);
       background: -ms-radial-gradient(top, ellipse cover, #494949 0%, #161616 100%);
       background: radial-gradient(ellipse at top, #494949 0%, #161616 100%); }
+    .choose-cards .black.flat,
+    .drawing-styles .black.flat {
+      background: #232323;
+      background: -moz-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #232323), color-stop(100%, #232323));
+      background: -webkit-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+      background: -o-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+      background: radial-gradient(ellipse at top, #232323 0%, #232323 100%); }
+      .choose-cards .black.flat:hover,
+      .drawing-styles .black.flat:hover {
+        background: #161616;
+        background: -moz-radial-gradient(top, ellipse cover, #161616 0%, #161616 100%);
+        background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #161616), color-stop(100%, #161616));
+        background: -webkit-radial-gradient(top, ellipse cover, #161616 0%, #161616 100%);
+        background: -o-radial-gradient(top, ellipse cover, #161616 0%, #161616 100%);
+        background: -ms-radial-gradient(top, ellipse cover, #161616 0%, #161616 100%);
+        background: radial-gradient(ellipse at top, #161616 0%, #161616 100%); }
 
 /*--- Credit Card ---*/
 .credit-card-container {
@@ -393,6 +498,69 @@ a:visited {
   background: -ms-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
   background: radial-gradient(ellipse at top, #565656 0%, #232323 100%); }
 .credit-card.black .back .cvc-box {
+  color: #232323; }
+
+/*--- FlatCard ---*/
+.credit-card.flat {
+  -webkit-box-shadow: 0 5px 0px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 0px 0px rgba(0, 0, 0, 0.1); }
+  .credit-card.flat .card-content:after {
+    display: none; }
+
+.credit-card.flat.primary .card-content {
+  background: #46759a;
+  background: -moz-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #46759a), color-stop(100%, #46759a));
+  background: -webkit-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+  background: -o-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #46759a 0%, #46759a 100%);
+  background: radial-gradient(ellipse at top, #46759a 0%, #46759a 100%); }
+.credit-card.flat.primary .back .cvc-box {
+  color: #46759a; }
+
+.credit-card.flat.oliver .card-content {
+  background: #7dad60;
+  background: -moz-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #7dad60), color-stop(100%, #7dad60));
+  background: -webkit-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+  background: -o-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #7dad60 0%, #7dad60 100%);
+  background: radial-gradient(ellipse at top, #7dad60 0%, #7dad60 100%); }
+.credit-card.flat.oliver .back .cvc-box {
+  color: #7dad60; }
+
+.credit-card.flat.champagne .card-content {
+  background: #be9d6b;
+  background: -moz-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #be9d6b), color-stop(100%, #be9d6b));
+  background: -webkit-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+  background: -o-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #be9d6b 0%, #be9d6b 100%);
+  background: radial-gradient(ellipse at top, #be9d6b 0%, #be9d6b 100%); }
+.credit-card.flat.champagne .back .cvc-box {
+  color: #be9d6b; }
+
+.credit-card.flat.silver .card-content {
+  background: #959595;
+  background: -moz-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #959595), color-stop(100%, #959595));
+  background: -webkit-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+  background: -o-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #959595 0%, #959595 100%);
+  background: radial-gradient(ellipse at top, #959595 0%, #959595 100%); }
+.credit-card.flat.silver .back .cvc-box {
+  color: #959595; }
+
+.credit-card.flat.black .card-content {
+  background: #232323;
+  background: -moz-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #232323), color-stop(100%, #232323));
+  background: -webkit-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+  background: -o-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #232323 0%, #232323 100%);
+  background: radial-gradient(ellipse at top, #232323 0%, #232323 100%); }
+.credit-card.flat.black .back .cvc-box {
   color: #232323; }
 
 /*--- DataTable ---*/

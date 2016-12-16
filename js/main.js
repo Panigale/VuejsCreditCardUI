@@ -34,8 +34,15 @@ $(document).ready(function () {
     $('.choose-cards button').click(function () {
         for (i = 0; i < cardTypes.length; i++) {
             $('.credit-card').removeClass(cardTypes[i]);
+            $('#switchStyleButton').removeClass(cardTypes[i]);
         }
         $('.credit-card').addClass($(this).val());
+        $('#switchStyleButton').addClass($(this).val());
+    });
+
+    $('#switchStyleButton').click(function () {
+        $(this).toggleClass('flat');
+        $('.credit-card').toggleClass('flat');
     });
 
 });

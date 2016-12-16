@@ -19,7 +19,15 @@ $(document).ready(function () {
     $('#sendCreditCardData').click(function () {
         $('.credit-card').toggleClass('data-send');
         $('.data-table').fadeToggle('slow');
-    })
+    });
+
+    var cardTypes = ["primary", "champagne", "silver", "black"];
+    $('.choose-cards button').click(function () {
+        for (i = 0; i < cardTypes.length; i++) {
+            $('.credit-card').removeClass(cardTypes[i]);
+        }
+        $('.credit-card').addClass($(this).val());
+    });
 });
 
 

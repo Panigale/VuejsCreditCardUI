@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Aldrich");
 /*--- Variables ---*/
+/*--- Card Colors ---*/
 /*--- Mixins ---*/
 /*--- Base Setting ---*/
 html,
@@ -41,6 +42,83 @@ a:focus,
 a:visited {
   text-decoration: none; }
 
+/*--- Introduction ---*/
+.choose-cards {
+  margin: 10px auto; }
+  .choose-cards button {
+    color: #ffffff;
+    margin: 0px 5px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px; }
+    .choose-cards button:hover, .choose-cards button:focus, .choose-cards button:active:focus {
+      color: #ffffff;
+      outline: none; }
+  .choose-cards .btn-primary-card {
+    background: #86aecc;
+    background: -moz-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #86aecc), color-stop(100%, #364d5f));
+    background: -webkit-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+    background: -o-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+    background: radial-gradient(ellipse at top, #86aecc 0%, #364d5f 100%); }
+    .choose-cards .btn-primary-card:hover {
+      background: #74a2c4;
+      background: -moz-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #74a2c4), color-stop(100%, #2d404f));
+      background: -webkit-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
+      background: -o-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #74a2c4 0%, #2d404f 100%);
+      background: radial-gradient(ellipse at top, #74a2c4 0%, #2d404f 100%); }
+  .choose-cards .btn-champagene {
+    background: #F4E3C3;
+    background: -moz-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #F4E3C3), color-stop(100%, #af956d));
+    background: -webkit-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+    background: -o-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+    background: radial-gradient(ellipse at top, #F4E3C3 0%, #af956d 100%); }
+    .choose-cards .btn-champagene:hover {
+      background: #f0d9ad;
+      background: -moz-radial-gradient(top, ellipse cover, #f0d9ad 0%, #a6895d 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #f0d9ad), color-stop(100%, #a6895d));
+      background: -webkit-radial-gradient(top, ellipse cover, #f0d9ad 0%, #a6895d 100%);
+      background: -o-radial-gradient(top, ellipse cover, #f0d9ad 0%, #a6895d 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #f0d9ad 0%, #a6895d 100%);
+      background: radial-gradient(ellipse at top, #f0d9ad 0%, #a6895d 100%); }
+  .choose-cards .btn-silver {
+    background: #E1E1E1;
+    background: -moz-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #E1E1E1), color-stop(100%, #959595));
+    background: -webkit-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+    background: -o-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+    background: radial-gradient(ellipse at top, #E1E1E1 0%, #959595 100%); }
+    .choose-cards .btn-silver:hover {
+      background: #d4d4d4;
+      background: -moz-radial-gradient(top, ellipse cover, #d4d4d4 0%, #888888 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #d4d4d4), color-stop(100%, #888888));
+      background: -webkit-radial-gradient(top, ellipse cover, #d4d4d4 0%, #888888 100%);
+      background: -o-radial-gradient(top, ellipse cover, #d4d4d4 0%, #888888 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #d4d4d4 0%, #888888 100%);
+      background: radial-gradient(ellipse at top, #d4d4d4 0%, #888888 100%); }
+  .choose-cards .btn-black {
+    background: #565656;
+    background: -moz-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+    background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #565656), color-stop(100%, #232323));
+    background: -webkit-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+    background: -o-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+    background: -ms-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+    background: radial-gradient(ellipse at top, #565656 0%, #232323 100%); }
+    .choose-cards .btn-black:hover {
+      background: #494949;
+      background: -moz-radial-gradient(top, ellipse cover, #494949 0%, #161616 100%);
+      background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #494949), color-stop(100%, #161616));
+      background: -webkit-radial-gradient(top, ellipse cover, #494949 0%, #161616 100%);
+      background: -o-radial-gradient(top, ellipse cover, #494949 0%, #161616 100%);
+      background: -ms-radial-gradient(top, ellipse cover, #494949 0%, #161616 100%);
+      background: radial-gradient(ellipse at top, #494949 0%, #161616 100%); }
+
 /*--- Credit Card ---*/
 .credit-card-container {
   width: 428px;
@@ -53,18 +131,17 @@ a:visited {
 .credit-card {
   width: 100%;
   height: 100%;
-  background: #86aecc;
-  background: -moz-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
-  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #86aecc), color-stop(100%, #364d5f));
-  background: -webkit-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
-  background: -o-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
-  background: -ms-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
-  background: radial-gradient(ellipse at top, #86aecc 0%, #364d5f 100%);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   border-radius: 20px;
   position: absolute;
   color: #ffffff;
+  -webkit-box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: margin-left 1s ease-in-out, transform 1s;
   -moz-transition: margin-left 1s ease-in-out, transform 1s;
@@ -76,7 +153,7 @@ a:visited {
   .credit-card * {
     font-family: 'Aldrich', sans-serif;
     text-shadow: 0 1px 10px -5px rgba(0, 0, 0, 0.5); }
-  .credit-card figure {
+  .credit-card .card-content {
     margin: 0;
     display: block;
     position: absolute;
@@ -93,13 +170,15 @@ a:visited {
     background: -o-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
     background: -ms-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
     background: radial-gradient(ellipse at top, #86aecc 0%, #364d5f 100%); }
-    .credit-card figure:after {
+    .credit-card .card-content:after {
       position: absolute;
       content: "";
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
       border-radius: 20px;
       background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
       opacity: 0;
@@ -107,13 +186,18 @@ a:visited {
       -moz-transition: opacity 0.3s ease-in-out;
       -o-transition: opacity 0.3s ease-in-out;
       transition: opacity 0.3s ease-in-out; }
-    .credit-card figure:hover:after {
+    .credit-card .card-content:hover:after {
       opacity: 1; }
   .credit-card .front {
     background-repeat: no-repeat;
     padding: 10px 25px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
     border-radius: 20px; }
   .credit-card.flipped {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
     transform: rotateY(180deg); }
   .credit-card .bank-name {
     color: #ffffff;
@@ -123,6 +207,8 @@ a:visited {
     height: 45px;
     background-color: Khaki;
     margin: 10px 0 10px 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
     border-radius: 10px; }
   .credit-card .credit-card-numbers {
     height: 30px;
@@ -202,7 +288,12 @@ a:visited {
     background-image: url(../img/jcb.jpg); }
   .credit-card .back {
     padding: 10px 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
     border-radius: 20px;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
     transform: rotateY(180deg); }
     .credit-card .back .magnetic-stripe {
       position: absolute;
@@ -222,7 +313,7 @@ a:visited {
       margin-top: 100px;
       width: 100px;
       height: 50px;
-      color: #537188;
+      color: #364d5f;
       background-color: #fff;
       display: inline-block;
       float: left;
@@ -232,15 +323,63 @@ a:visited {
       .credit-card .back .cvc-box p {
         margin: 0; }
 
+/*--- ColorSet ---*/
+.credit-card.primary .card-content {
+  background: #86aecc;
+  background: -moz-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #86aecc), color-stop(100%, #364d5f));
+  background: -webkit-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+  background: -o-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #86aecc 0%, #364d5f 100%);
+  background: radial-gradient(ellipse at top, #86aecc 0%, #364d5f 100%); }
+.credit-card.primary .back .cvc-box {
+  color: #364d5f; }
+
+.credit-card.champagne .card-content {
+  background: #F4E3C3;
+  background: -moz-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #F4E3C3), color-stop(100%, #af956d));
+  background: -webkit-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+  background: -o-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #F4E3C3 0%, #af956d 100%);
+  background: radial-gradient(ellipse at top, #F4E3C3 0%, #af956d 100%); }
+.credit-card.champagne .back .cvc-box {
+  color: #af956d; }
+
+.credit-card.silver .card-content {
+  background: #E1E1E1;
+  background: -moz-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #E1E1E1), color-stop(100%, #959595));
+  background: -webkit-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+  background: -o-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #E1E1E1 0%, #959595 100%);
+  background: radial-gradient(ellipse at top, #E1E1E1 0%, #959595 100%); }
+.credit-card.silver .back .cvc-box {
+  color: #959595; }
+
+.credit-card.black .card-content {
+  background: #565656;
+  background: -moz-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+  background: -webkit-gradient(radial, top top, 0px, top top, 100%, color-stop(0%, #565656), color-stop(100%, #232323));
+  background: -webkit-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+  background: -o-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+  background: -ms-radial-gradient(top, ellipse cover, #565656 0%, #232323 100%);
+  background: radial-gradient(ellipse at top, #565656 0%, #232323 100%); }
+.credit-card.black .back .cvc-box {
+  color: #232323; }
+
+/*--- DataTable ---*/
 .data-table {
   width: 428px;
   height: 270px;
   background-color: #ffffff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   border-radius: 20px;
   color: #364d5f;
   padding: 20px 20px;
   position: absolute;
-  top: 0;
+  top: 190px;
   left: 0;
   right: 0;
   margin: auto;

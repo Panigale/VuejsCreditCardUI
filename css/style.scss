@@ -15,6 +15,14 @@ $credit-card-width: 428px;
 $credit-card-height: 270px;
 $white-50: #ffffff;
 $card-border-radius: 20px;
+$page-background: #2d3136;
+$shadow-50: rgba(0,
+0,
+0,
+0.5);
+
+/*--- Card Colors ---*/
+
 $primary-30: rgba(134,
 174,
 204,
@@ -23,7 +31,12 @@ $primary-50: rgba(54,
 77,
 95,
 1);
-$page-background: #2d3136;
+$champagne-30: #F4E3C3;
+$champagne-50: #af956d;
+$silver-30: #E1E1E1;
+$silver-50: #959595;
+$black-30: #565656;
+$black-50: #232323;
 
 /*--- Mixins ---*/
 
@@ -39,6 +52,22 @@ $ease-type) {
 $height) {
     width: $width;
     height: $height;
+}
+
+@mixin border-radius($border-size) {
+    -webkit-border-radius: $border-size;
+    -moz-border-radius: $border-size;
+    border-radius: $border-size;
+}
+
+@mixin box-shadow($x,
+$y,
+$blur,
+$spread,
+$color) {
+    -webkit-box-shadow: $x $y $blur $spread $color;
+    -moz-box-shadow: $x $y $blur $spread $color;
+    box-shadow: $x $y $blur $spread $color;
 }
 
 @mixin background-gradient($start-color,
@@ -72,6 +101,8 @@ $transformTime) {
 
 @mixin transform-style($transformStyle) {
     -webkit-transform-style: $transformStyle;
+    -ms-transform-style: $transformStyle;
+    -o-transform-style: $transformStyle;
     transform-style: $transformStyle;
 }
 
@@ -80,6 +111,13 @@ $transformTime) {
     -ms-backface-visibility: $backface-visibility;
     -o-backface-visibility: $backface-visibility;
     backface-visibility: $backface-visibility;
+}
+
+@mixin flip-rotate-transform($degrees) {
+    -webkit-transform: rotateY($degrees);
+    -ms-transform: rotateY($degrees);
+    -o-transform: rotateY($degrees);
+    transform: rotateY($degrees);
 }
 
 
@@ -132,6 +170,54 @@ a:visited {
 }
 
 
+/*--- Introduction ---*/
+
+@mixin setting-cards($light,
+$main) {
+    @include radial-background-gradient($light,
+    $main,
+    top);
+    &:hover {
+        @include radial-background-gradient(darken($light,
+        5%),
+        darken($main,
+        5%),
+        top);
+    }
+}
+
+.choose-cards {
+    margin: 10px auto;
+    button {
+        color: $white-50;
+        margin: 0px 5px;
+        @include border-radius(6px);
+        &:hover,
+        &:focus,
+        &:active:focus {
+            color: $white-50;
+            outline: none;
+        }
+    }
+    .btn-primary-card {
+        @include setting-cards($primary-30,
+        $primary-50);
+    }
+    .btn-champagene {
+        @include setting-cards($champagne-30,
+        $champagne-50);
+    }
+    .btn-silver {
+        @include setting-cards($silver-30,
+        $silver-50);
+    }
+    .btn-black {
+        @include setting-cards($black-30,
+        $black-50);
+    }
+}
+
+
 /*--- Credit Card ---*/
 
 .credit-card-container {
@@ -146,13 +232,14 @@ a:visited {
 .credit-card {
     @include size(100%,
     100%);
-    @include radial-background-gradient($primary-30,
-    $primary-50,
-    top);
-    border-radius: $card-border-radius;
+    @include border-radius($card-border-radius);
     position: absolute;
     color: $white-50;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    @include box-shadow(0,
+    10px,
+    30px,
+    -10px,
+    $shadow-50);
     @include transform-style(preserve-3d);
     @include card-transition (1s,
     1s);
@@ -161,9 +248,9 @@ a:visited {
     }
     & * {
         font-family: 'Aldrich', sans-serif;
-        text-shadow: 0 1px 10px -5px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 1px 10px -5px $shadow-50;
     }
-    figure {
+    .card-content {
         margin: 0;
         display: block;
         position: absolute;
@@ -180,7 +267,7 @@ a:visited {
             100%);
             top: 0;
             left: 0;
-            border-radius: $card-border-radius;
+            @include border-radius($card-border-radius);
             background: radial-gradient(ellipse at top, $white-gradient-end 0%, $white-gradient-start 100%);
             opacity: 0;
             @include opacity-transition (0.3s,
@@ -193,10 +280,11 @@ a:visited {
     .front {
         background-repeat: no-repeat;
         padding: 10px 25px;
-        border-radius: $card-border-radius;
+        @include border-radius($card-border-radius);
     }
     &.flipped {
-        transform: rotateY( 180deg);
+        @include flip-rotate-transform(180deg);
+        //transform: rotateY( 180deg);
     }
     .bank-name {
         color: $white-50;
@@ -207,7 +295,7 @@ a:visited {
         height: 45px;
         background-color: Khaki;
         margin: 10px 0 10px 10px;
-        border-radius: 10px;
+        @include border-radius(10px);
     }
     .credit-card-numbers {
         height: 30px;
@@ -298,8 +386,9 @@ a:visited {
     }
     .back {
         padding: 10px 30px;
-        border-radius: $card-border-radius;
-        transform: rotateY( 180deg);
+        @include border-radius($card-border-radius);
+        @include flip-rotate-transform(180deg);
+        // transform: rotateY( 180deg);
         .magnetic-stripe {
             position: absolute;
             width: 100%;
@@ -320,7 +409,7 @@ a:visited {
             margin-top: 100px;
             width: 100px;
             height: 50px;
-            color: rgba(83, 113, 136, 1);
+            color: $primary-50;
             background-color: #fff;
             display: inline-block;
             float: left;
@@ -334,15 +423,53 @@ a:visited {
     }
 }
 
+
+/*--- ColorSet ---*/
+
+@mixin card-color-set($light-color,
+$main-color) {
+    .card-content {
+        @include radial-background-gradient($light-color,
+        $main-color,
+        top);
+    }
+    .back .cvc-box {
+        color: $main-color
+    }
+}
+
+.credit-card.primary {
+    @include card-color-set($primary-30,
+    $primary-50);
+}
+
+.credit-card.champagne {
+    @include card-color-set($champagne-30,
+    $champagne-50)
+}
+
+.credit-card.silver {
+    @include card-color-set($silver-30,
+    $silver-50)
+}
+
+.credit-card.black {
+    @include card-color-set($black-30,
+    $black-50)
+}
+
+
+/*--- DataTable ---*/
+
 .data-table {
     width: $credit-card-width;
     height: $credit-card-height;
     background-color: $white-50;
-    border-radius: $card-border-radius;
+    @include border-radius($card-border-radius);
     color: $primary-50;
     padding: 20px 20px;
     position: absolute;
-    top: 0;
+    top: 190px;
     left: 0;
     right: 0;
     margin: auto;

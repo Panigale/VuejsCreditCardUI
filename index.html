@@ -29,12 +29,22 @@
 </head>
 
 <body>
-    <h1 class="title">VueCard</h1>
-    <h3 class="sub-title">Credit Card UI module with VUE.js</h3>
+
+
     <article id="app">
+        <div class="container">
+            <h1 class="title">VueCard</h1>
+            <h3 class="sub-title">Credit Card UI module with VUE.js</h3>
+            <div class="choose-cards text-center">
+                <button class="btn btn-primary-card" value="primary">Primary</button>
+                <button class="btn btn-champagene" value="champagne">Champagne</button>
+                <button class="btn btn-silver" value="silver">Silver</button>
+                <button class="btn btn-black" value="black">Black</button>
+            </div>
+        </div>
         <section class="credit-card-container">
-            <section id="card" class="credit-card">
-                <figure class="front">
+            <section id="card" class="credit-card silver">
+                <figure class="front card-content">
                     <h2 class="bank-name">Vue Card</h2>
                     <div class="emv-chip"></div>
                     <div v-cloak class="credit-card-numbers">
@@ -51,7 +61,7 @@
                         <div class="credit-card-logo" :class="creditCardType"></div>
                 </figure>
                 <!-- Back side -->
-                <figure class="back">
+                <figure class="back card-content">
                     <div class="magnetic-stripe"></div>
                     <div class="sign-up-box"></div>
                     <div v-cloak class="cvc-box">

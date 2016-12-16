@@ -49,6 +49,39 @@ $end-color) {
     background: -webkit-linear-gradient(90deg, $start-color 0%, $end-color 100%);
 }
 
+@mixin radial-background-gradient($start-color,
+$end-color,
+$position) {
+    background: $start-color;
+    background: -moz-radial-gradient($position, ellipse cover, $start-color 0%, $end-color 100%);
+    background: -webkit-gradient(radial, $position $position, 0px, $position $position, 100%, color-stop(0%, $start-color), color-stop(100%, $end-color));
+    background: -webkit-radial-gradient($position, ellipse cover, $start-color 0%, $end-color 100%);
+    background: -o-radial-gradient($position, ellipse cover, $start-color 0%, $end-color 100%);
+    background: -ms-radial-gradient($position, ellipse cover, $start-color 0%, $end-color 100%);
+    background: radial-gradient(ellipse at $position, $start-color 0%, $end-color 100%);
+}
+
+@mixin card-transition($moveTime,
+$transformTime) {
+    -webkit-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    -moz-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    -ms-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    -o-transition: margin-left $moveTime ease-in-out, transform $transformTime;
+    transition: margin-left $moveTime ease-in-out, transform $transformTime;
+}
+
+@mixin transform-style($transformStyle) {
+    -webkit-transform-style: $transformStyle;
+    transform-style: $transformStyle;
+}
+
+@mixin backface-visibility($backface-visibility) {
+    -webkit-backface-visibility: $backface-visibility;
+    -ms-backface-visibility: $backface-visibility;
+    -o-backface-visibility: $backface-visibility;
+    backface-visibility: $backface-visibility;
+}
+
 
 /*--- Base Setting ---*/
 
@@ -110,24 +143,17 @@ a:visited {
     margin-top: 20px;
 }
 
-@mixin card-transition($moveTime,
-$transformTime) {
-    -webkit-transition: margin-left $moveTime ease-in-out, transform $transformTime;
-    -moz-transition: margin-left $moveTime ease-in-out, transform $transformTime;
-    -ms-transition: margin-left $moveTime ease-in-out, transform $transformTime;
-    -o-transition: margin-left $moveTime ease-in-out, transform $transformTime;
-    transition: margin-left $moveTime ease-in-out, transform $transformTime;
-}
-
 .credit-card {
     @include size(100%,
     100%);
-    background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
+    @include radial-background-gradient($primary-30,
+    $primary-50,
+    top);
     border-radius: $card-border-radius;
     position: absolute;
     color: $white-50;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    transform-style: preserve-3d;
+    @include transform-style(preserve-3d);
     @include card-transition (1s,
     1s);
     &.data-send {
@@ -143,9 +169,10 @@ $transformTime) {
         position: absolute;
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
+        @include backface-visibility(hidden);
+        @include radial-background-gradient($primary-30,
+        $primary-50,
+        top);
         &:after {
             position: absolute;
             content: "";
@@ -164,9 +191,7 @@ $transformTime) {
         }
     }
     .front {
-        background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
         background-repeat: no-repeat;
-        background-color: $primary-50;
         padding: 10px 25px;
         border-radius: $card-border-radius;
     }
@@ -251,34 +276,27 @@ $transformTime) {
         @include opacity-transition(0.5s,
         ease-in-out);
     }
-    .credit-card-logo.visa:after {
-        background-image: url(../img/visa.jpg);
+    .credit-card-logo.visa:after,
+    .credit-card-logo.master:after,
+    .credit-card-logo.american-express:after,
+    .credit-card-logo.jcb:after {
         opacity: 1;
         @include opacity-transition(0.5s,
         ease-in-out);
+    }
+    .credit-card-logo.visa:after {
+        background-image: url(../img/visa.jpg);
     }
     .credit-card-logo.master:after {
         background-image: url(../img/master.jpg);
-        opacity: 1;
-        @include opacity-transition(0.5s,
-        ease-in-out);
     }
     .credit-card-logo.american-express:after {
         background-image: url(../img/americanExpress.jpg);
-        opacity: 1;
-        @include opacity-transition(0.5s,
-        ease-in-out);
     }
     .credit-card-logo.jcb:after {
         background-image: url(../img/jcb.jpg);
-        opacity: 1;
-        @include opacity-transition(0.5s,
-        ease-in-out);
     }
     .back {
-        background: radial-gradient(ellipse at top, $primary-30 0%, $primary-50 100%);
-        background-repeat: no-repeat;
-        background-color: $primary-50;
         padding: 10px 30px;
         border-radius: $card-border-radius;
         transform: rotateY( 180deg);

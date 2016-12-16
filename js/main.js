@@ -41,6 +41,7 @@ $(document).ready(function () {
     });
 
     $('#switchStyleButton').click(function () {
+        $('.choose-cards button').toggleClass('flat');
         $(this).toggleClass('flat');
         $('.credit-card').toggleClass('flat');
     });

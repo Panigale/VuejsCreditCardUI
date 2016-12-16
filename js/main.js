@@ -1,28 +1,28 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('.only-numbers').keyup(function () {
+    $('.only-numbers').keyup(function() {
         if (this.value != this.value.replace(/[^0-9\.]/g, '')) {
             this.value = this.value.replace(/[^0-9\.]/g, '');
         }
     });
 
-    $('.flipFront').click(function () {
+    $('.flipFront').click(function() {
         $('.credit-card').removeClass('flipped');
     });
-    $('.flipBack').click(function () {
+    $('.flipBack').click(function() {
         $('.credit-card').addClass('flipped');
     });
-    $('.flipBack').focus(function () {
+    $('.flipBack').focus(function() {
         $('.credit-card:not(data-send)').addClass('flipped');
     });
 
-    $('#sendCreditCardData').click(function () {
+    $('#sendCreditCardData').click(function() {
         $('.credit-card').toggleClass('data-send');
         $('.data-table').fadeToggle('slow');
     });
 
-    var cardTypes = ["primary", "champagne", "silver", "black"];
-    $('.choose-cards button').click(function () {
+    var cardTypes = ["primary", "oliver", "champagne", "silver", "black"];
+    $('.choose-cards button').click(function() {
         for (i = 0; i < cardTypes.length; i++) {
             $('.credit-card').removeClass(cardTypes[i]);
         }
@@ -43,7 +43,7 @@ var app = new Vue({
         sentTime: ""
     },
     methods: {
-        isNumber: function (evt) {
+        isNumber: function(evt) {
             evt = (evt) ? evt : window.event;
             var charCode = (evt.which) ? evt.which : evt.keyCode;
             if ((charCode > 31 && (charCode < 48 || charCode > 57)) && charCode !== 46) {
@@ -54,7 +54,7 @@ var app = new Vue({
         }
     },
     computed: {
-        numberGroup1: function () {
+        numberGroup1: function() {
             if (this.inputNumbers.substr(0, 4) == '') {
                 return '****'
             } else {
@@ -62,7 +62,7 @@ var app = new Vue({
                 return numberGroup1
             }
         },
-        numberGroup2: function () {
+        numberGroup2: function() {
             if (this.inputNumbers.substr(4, 4) == '') {
                 return '****'
             } else {
@@ -70,7 +70,7 @@ var app = new Vue({
                 return numberGroup2
             }
         },
-        numberGroup3: function () {
+        numberGroup3: function() {
             if (this.inputNumbers.substr(8, 4) == '') {
                 return '****'
             } else {
@@ -78,7 +78,7 @@ var app = new Vue({
                 return numberGroup3
             }
         },
-        numberGroup4: function () {
+        numberGroup4: function() {
             if (this.inputNumbers.substr(12, 4) == '') {
                 return '****'
             } else {
@@ -86,21 +86,21 @@ var app = new Vue({
                 return numberGroup4
             }
         },
-        showMonth: function () {
+        showMonth: function() {
             if (this.month == "") {
                 return "MM"
             } else {
                 return this.month
             }
         },
-        showYear: function () {
+        showYear: function() {
             if (this.year == "") {
                 return "YY"
             } else {
                 return "20" + this.year
             }
         },
-        fullName: function () {
+        fullName: function() {
             if (this.firstName == '' && this.lastName == '') {
                 return 'Your Name'
             } else {
@@ -108,7 +108,7 @@ var app = new Vue({
             }
 
         },
-        creditCardType: function () {
+        creditCardType: function() {
             firstNumber = this.inputNumbers.split('')
             if (firstNumber[0] == '4') {
                 return 'visa'
@@ -123,7 +123,7 @@ var app = new Vue({
             }
         },
 
-        calculateSentTime: function () {
+        calculateSentTime: function() {
             this.sentTime = new Date()
             return this.sentTime
         }

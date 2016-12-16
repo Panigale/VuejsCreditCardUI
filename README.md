@@ -40,6 +40,7 @@ Auto card type detaction with Vue.js condition statements.
 ### Auto flip
 ---
 ![](https://github.com/andy19910102/VuejsCreditCardUI/blob/master/demoGif/vueCardDemoAutoFlip.gif?raw=true)
+---
 Pure CSS auto flip UI when input the data of CVV. 
 
 

@@ -1,5 +1,6 @@
 # Vue Card
 A credit card UI module made with VUE.js
+Check out the demo [here](https://andy19910102.github.io/VuejsCreditCardUI/)
 
 ## Install
 Base on [Bootstrap](http://getbootstrap.com/) and [Vue.js 2.0](https://vuejs.org/).
